@@ -13,11 +13,8 @@ class UserModel {
 }
 
 class User {
-  String success;
+  bool success;
   UserModel userModel;
 
-  User({
-    required this.success,
-    required this.userModel
-  });
+  User({required this.success, required this.userModel});
 }

@@ -1,6 +1,6 @@
 // const String apiHost = "178.128.196.153:8888";
-const String apiHost = "127.0.0.1:8888";
-const String apiBaseUrl = "/api";
+const String apiHost = "ecommerce-backend-4ukw.vercel.app";
+// const String apiBaseUrl = "/api";
 
 const String chatApiHost = "anna.demo.edventures.ai";
 const String chatApiBaseUrl = "/webhooks/rest";
