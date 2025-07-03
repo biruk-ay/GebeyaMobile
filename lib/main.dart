@@ -74,7 +74,7 @@ class _MyHomePageState extends State<MyHomePage> {
     UserRepository()
         .login("q@q.com", "q")
         .then((user) {
-          developer.log(user.success.toString());
+          developer.log(user.userModel.token);
         })
         .catchError((error) {
           developer.log("Login error: $error");
