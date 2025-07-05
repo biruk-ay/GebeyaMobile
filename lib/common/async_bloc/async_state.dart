@@ -1,4 +1,4 @@
-import 'package:edventures/common/async_bloc/base_state.dart';
+import 'package:gebeya/common/async_bloc/base_state.dart';
 
 import 'async_error.dart';
 import 'async_status.dart';

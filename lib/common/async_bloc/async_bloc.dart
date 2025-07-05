@@ -1,16 +1,15 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:edventures/common/async_bloc/async_events.dart';
-import 'package:edventures/common/async_bloc/async_handler.dart';
-import 'package:edventures/common/async_bloc/async_state.dart';
-import 'package:edventures/common/async_bloc/async_status.dart';
-import 'package:edventures/common/async_bloc/base_state.dart';
-import 'package:edventures/common/async_bloc/error_mapper.dart';
+import 'package:gebeya/common/async_bloc/async_events.dart';
+import 'package:gebeya/common/async_bloc/async_handler.dart';
+import 'package:gebeya/common/async_bloc/async_state.dart';
+import 'package:gebeya/common/async_bloc/async_status.dart';
+import 'package:gebeya/common/async_bloc/base_state.dart';
+import 'package:gebeya/common/async_bloc/error_mapper.dart';
 
 class FunctionalAsyncHandler extends AsyncEventHandler<AsyncEvent, BaseState> {
   Future<void> Function(AsyncEvent event, BaseState state) onEventCallback;
   AsyncState Function(BaseState)? stateGetter;
-  Future<void> Function(AsyncEvent event, BaseState state, dynamic error)?
-      onErrorCallback;
+  Future<void> Function(AsyncEvent event, BaseState state, dynamic error)? onErrorCallback;
   Future<void> Function(AsyncEvent event, BaseState state)? onLoadingCallback;
   Future<void> Function(AsyncEvent event, BaseState state)? onDoneCallback;
 

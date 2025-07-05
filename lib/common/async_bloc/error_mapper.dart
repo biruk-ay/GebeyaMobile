@@ -3,9 +3,9 @@
 
 import 'dart:io';
 
-import 'package:edventures/common/async_bloc/async_error.dart';
-import 'package:edventures/common/forms/exceptions.dart';
-import 'package:edventures/common/network/network_client.dart';
+import 'package:gebeya/common/async_bloc/async_error.dart';
+import 'package:gebeya/common/forms/exceptions.dart';
+import 'package:gebeya/common/network/network_client.dart';
 
 class ErrorMapper{
 

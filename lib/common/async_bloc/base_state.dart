@@ -1,5 +1,5 @@
 
-import 'package:edventures/common/async_bloc/async_status.dart';
+import 'package:gebeya/common/async_bloc/async_status.dart';
 
 import 'async_error.dart';
 
