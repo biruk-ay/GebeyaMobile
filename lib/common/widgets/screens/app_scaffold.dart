@@ -17,12 +17,13 @@ class AppScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (bool didPop, Object? result) async {
+        return;
       },
       child: DefaultTextStyle(
-        style: GoogleFonts.jost(),
+        style: GoogleFonts.roboto(),
         child: Scaffold(
           backgroundColor: ColorsConfigs.white,
           appBar: AppBar(
