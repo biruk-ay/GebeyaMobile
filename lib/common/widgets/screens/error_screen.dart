@@ -16,29 +16,32 @@ class ErrorScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FullContainer(
-        decoration: BoxDecoration(color: ColorsConfigs.white),
-        child: PercentageContainer(
-            width: 0.75,
-            child: Column(
-              children: [
-                Image.asset("assets/images/error.png"),
-                const SizedBox(height: SpacingConfigs.spacing5,),
-                Heading2("Sorry, An Error has Occurred", textAlign: TextAlign.center,),
-                const SizedBox(height: SpacingConfigs.spacing3,),
-                BodyText(state.initError!.message, textAlign: TextAlign.center),
-                const SizedBox(
-                  height: SpacingConfigs.spacing2,
-                ),
-                BaseButton(
-                  onPressed: () {
-                    RoutingUtils.redirect("/", context);
-                  },
-                  child: BodyText(
-                    "Go to Home",
-                    color: ColorsConfigs.white,
-                  ),
-                )
-              ],
-            )));
+      decoration: BoxDecoration(color: ColorsConfigs.white),
+      child: PercentageContainer(
+        width: 0.75,
+        child: Column(
+          children: [
+            Image.asset("assets/images/error.png"),
+            const SizedBox(height: SpacingConfigs.spacing5),
+            Heading2(
+              "Sorry, An Error has Occurred",
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: SpacingConfigs.spacing3),
+            BodyText(
+              state.initError?.message ?? "Something went wrong",
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(height: SpacingConfigs.spacing2),
+            BaseButton(
+              onPressed: () {
+                RoutingUtils.redirect("/", context);
+              },
+              child: BodyText("Go to Home", color: ColorsConfigs.white),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

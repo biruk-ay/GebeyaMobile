@@ -5,12 +5,16 @@ import 'dart:developer' as developer;
 
 import 'package:gebeya/apps/auth/data/models/user.dart';
 import 'package:gebeya/apps/auth/data/repositories/user_repository.dart';
+import 'package:gebeya/common/widgets/screens/error_screen.dart';
+import 'common/async_bloc/base_state.dart';
 
 void main() {
-  runApp(const MyApp());
+  final BaseState state = BaseState();
+  runApp(MaterialApp(home: ErrorScreen(state)));
 }
 
 class MyApp extends StatelessWidget {
+  // final BaseState state;
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -37,6 +41,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: ErrorScreen(super),
     );
   }
 }
