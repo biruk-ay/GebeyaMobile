@@ -6,11 +6,12 @@ import 'dart:developer' as developer;
 import 'package:gebeya/apps/auth/data/models/user.dart';
 import 'package:gebeya/apps/auth/data/repositories/user_repository.dart';
 import 'package:gebeya/common/widgets/screens/error_screen.dart';
+import 'package:gebeya/common/widgets/screens/loading_screen.dart';
 import 'common/async_bloc/base_state.dart';
 
 void main() {
-  final BaseState state = BaseState();
-  runApp(MaterialApp(home: ErrorScreen(state)));
+  // final BaseState state = BaseState();
+  runApp(MaterialApp(home: LoadingScreen()));
 }
 
 class MyApp extends StatelessWidget {
